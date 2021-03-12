@@ -53,7 +53,6 @@ public class UserServiceImpl implements UserService {
 	public User saveUser(User user) {
 		LOGGER.info("Invocando saveUser usuario={} ...", user);
 		if (user != null) {
-			user.setId(null);
 			return userRepository.save(user);
 		} else {
 			return null;
